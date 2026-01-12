@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Customer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Update Customer</h1>
+<hr>
+<button id="btnFlowers">Load Flowers</button>
+
+<div id="loader" style="display:none;">Loading...</div>
+<div id="flowers"></div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="app.js"></script>
+<hr>
+
+<form id="updateForm">
+    <table>
+        <tr>
+            <td>Customer ID</td>
+            <td><input type="number" id="id"></td>
+        </tr>
+        <tr>
+            <td>First Name</td>
+            <td><input type="text" id="firstname"></td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td><input type="text" id="lastname"></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>Contact Number</td>
+            <td><input type="text" id="contactnumber"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <!-- ✅ BUTTON ADDED -->
+                <button type="button" id="updateBtn">Update Customer</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<script>
+$("#btnFlowers").click(function () {
+
+  $("#loader").fadeIn(500);
+  $("#flowers").slideUp(200);
+
+  $.ajax({
+    url: "http://localhost:7498/api/flowers",
+    method: "GET",
+    success: function (data) {
+      $("#loader").fadeOut(300);
+
+      let html = "";
+      data.forEach(flower => {
+        html += `
+          <div class="card">
+            <h3>${flower.name}</h3>
+            <p>description: ${flower.description}</p>
+            <p>Price: ${flower.price}</p>
+          </div>
+        `;
+      });
+
+      $("#flowers").html(html).slideDown(400);
+    },
+    error: function () {
+      $("#loader").fadeOut();
+      alert("Error loading flowers");
+    }
+  });
+});
+
+$(document).ready(function(){
+    $("#updateBtn").click(function(){
+        var updateCustomer = {
+            id: $("#id").val(),
+            firstname: $("#firstname").val(),
+            lastname: $("#lastname").val(),
+            email: $("#email").val(),
+            contactnumber: $("#contactnumber").val()
+        };
+        let url = "/api/customers/" + updateCustomer.id;
+        $.ajax({
+            url: url,
+            type: "PUT",
+            contentType: "application/json",
+            data: JSON.stringify(updateCustomer),
+            success: function(response){
+                alert("Customer updated successfully!");
+                console.log(response);
+            },
+            error: function(error){
+                alert("Update failed!");
+                console.log(error);
+            }
+        });
+    });
+
+});
+</script>
+
+</body>
+</html>
