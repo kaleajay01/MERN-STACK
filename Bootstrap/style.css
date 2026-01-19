@@ -1,11 +1,150 @@
-.navbar {
-    background-color: #be2222;
+/* =====================
+   Global Styles
+===================== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
 }
 
-.footer{
-    background-color: #be2222;
+/* =====================
+   Navbar
+===================== */
+.navbar-custom {
+    background-color: #2f855a;
 }
 
-.btn{
-    
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d1fae5 !important;
+}
+
+/* =====================
+   Hero Section
+===================== */
+section.bg-light {
+    background: linear-gradient(
+        rgba(47, 133, 90, 0.85),
+        rgba(47, 133, 90, 0.85)
+    ),
+    url('/images/hero-flower.jpg') center/cover no-repeat;
+    color: #ffffff;
+}
+
+section.bg-light h1,
+section.bg-light p {
+    color: #ffffff;
+}
+
+.btn-primary {
+    background-color: #2f855a;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #276749;
+}
+
+/* =====================
+   Cards
+===================== */
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+.product-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn-outline-primary {
+    color: #2f855a;
+    border-color: #2f855a;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2f855a;
+    color: #ffffff;
+}
+
+/* =====================
+   Contact Button
+===================== */
+.text-center button.btn {
+    background-color: #38a169;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.text-center button.btn:hover {
+    background-color: #2f855a;
+}
+
+/* =====================
+   Modal
+===================== */
+.modal-header {
+    background-color: #2f855a;
+    color: white;
+}
+
+.modal-title {
+    font-weight: 600;
+}
+
+/* =====================
+   Footer
+===================== */
+.footer {
+    background-color: #1f2933;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* =====================
+   Scroll to Top Button
+===================== */
+#scrollTopBtn {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+}
+
+/* =====================
+   Responsive
+===================== */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .product-img {
+        height: 200px;
+    }
 }
