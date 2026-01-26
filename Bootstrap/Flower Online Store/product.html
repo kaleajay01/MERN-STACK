@@ -5,14 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transflower - Products</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
         <div class="container">
             <a class="navbar-brand text-dark" href="index.html">🌸 Transflower Store</a>
@@ -29,25 +36,29 @@
         </div>
     </nav>
 
+    <!-- Products Section -->
     <section class="container my-5">
         <h2 class="text-center mb-4">Explore Our Collections</h2>
+
+        <!-- Tabs -->
         <ul class="nav nav-tabs justify-content-center" id="productTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="roses-tab" data-bs-toggle="tab" data-bs-target="#roses"
-                    type="button" role="tab">Roses</button>
+            <li class="nav-item">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#roses">Roses</button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="tulips-tab" data-bs-toggle="tab" data-bs-target="#tulips" type="button"
-                    role="tab">Tulips</button>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tulips">Tulips</button>
             </li>
-            <li class="nav-item" role="presentation">
-                <button class="nav-link" id="sunflower-tab" data-bs-toggle="tab" data-bs-target="#sunflower"
-                    type="button" role="tab">sunflower</button>
+            <li class="nav-item">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#sunflower">Sunflower</button>
             </li>
         </ul>
-        <div class="tab-content mt-4" id="productTabContent">
-            <div class="tab-pane fade show active" id="roses" role="tabpanel">
-                <div class="row">
+
+        <!-- Tab Content -->
+        <div class="tab-content mt-4">
+
+            <!-- Roses -->
+            <div class="tab-pane fade show active" id="roses">
+                <div class="row justify-content-center">
                     <div class="col-md-4">
                         <div class="card">
                             <img src="images/rose.jpg" class="card-img-top product-img" alt="Red Rose Bouquet">
@@ -60,53 +71,31 @@
                 </div>
             </div>
 
-            <div class="tab-pane fade show active" id="tulips" role="tabpanel">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="images/tulip.jpg" class="card-img-top product-img" alt="Tulip Bouquet">
-                            <div class="card-body text-center"></div>
-                            <h5>Tulip Delight</h5>
-                            <p>Rs. 999</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-center">Tulip collection coming soon 🌷</p>
+            <!-- Tulips -->
+            <div class="tab-pane fade" id="tulips">
+                <p class="text-center mt-4">Tulip collection coming soon 🌷</p>
             </div>
 
-            <div class="tab-pane fade show active" id="sunflower" role="tabpanel">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card">
-                            <img src="images/sunflower.jpg" class="card-img-top product-img" alt="Sunflower Bouquet">
-                            <div class="card-body text-center"></div>
-                            <h5>Sunflower</h5>
-                            <p>Rs. 989</p>
-                        </div>
-                    </div>
-                </div>
-                <p class="text-center">Sunflower collection coming soon 🌷</p>
+            <!-- Sunflower -->
+            <div class="tab-pane fade" id="sunflower">
+                <p class="text-center mt-4">Sunflower collection coming soon 🌻</p>
             </div>
+
         </div>
     </section>
 
-    <div class="container text-center">
-        <a class="btn btn-outline-primary" href="productcatalog.html">Productcatalog</a>
+    <!-- Catalog Button -->
+    <div class="container text-center mb-4">
+        <a class="btn btn-outline-primary" href="productcatalog.html">Product Catalog</a>
     </div>
 
-    <footer class="bg-primary text-white text-center py-4 mt-5">
+    <!-- Footer -->
+    <footer class="bg-primary text-white text-center py-4">
         <p>&copy; 2024 Transflower. All rights reserved.</p>
     </footer>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
-    </script>
 </body>
-
 </html>
