@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Flower | TFL Store</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body>
+
+<body style="font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 20px; text-align: center;">
 
     <h1>Update Existing Flower</h1>
     <hr>
@@ -52,63 +54,63 @@
     </form>
 
     <script>
-        $(document).ready(function(){
-                $("button").click(function(){
-                    //alert("button clicked.....");
+        $(document).ready(function () {
+            $("button").click(function () {
+                //alert("button clicked.....");
 
-                    var updateCustomer = {
-                        "id":5,
-                        "firstname":"karan",
-                        "lastname":"rajput",
-                        "email":"karan.rajput@gmail.com",
-                        "contactnumber":"9049416998"
-                    };
-                    let url = "/api/customers/" + updateCustomer.id;
-                    /*$.put(url,updateCustomer, function(){
-                        console.log("data is updated to server");
-                    });*/
+                var updateCustomer = {
+                    "id": 5,
+                    "firstname": "karan",
+                    "lastname": "rajput",
+                    "email": "karan.rajput@gmail.com",
+                    "contactnumber": "9049416998"
+                };
+                let url = "/api/customers/" + updateCustomer.id;
+                /*$.put(url,updateCustomer, function(){
+                    console.log("data is updated to server");
+                });*/
 
-                    //post 
-                    $.ajax({
-                        url:url,
-                        type:'post',
-                        data:updateCustomer,
-                        success: function (result){
-                            console.log("new customer is added in server");
-                        }
-                    });
+                //post 
+                $.ajax({
+                    url: url,
+                    type: 'post',
+                    data: updateCustomer,
+                    success: function (result) {
+                        console.log("new customer is added in server");
+                    }
+                });
 
-                    //get
-                    $.ajax({
-                        url:url,
-                        type:'get',
-                        data:updateCustomer,
-                        success: function (result){
-                            console.log("customer is here in server");
-                        }
-                    });
+                //get
+                $.ajax({
+                    url: url,
+                    type: 'get',
+                    data: updateCustomer,
+                    success: function (result) {
+                        console.log("customer is here in server");
+                    }
+                });
 
-                    //put
-                    $.ajax({
-                        url:url,
-                        type:'put',
-                        data:updateCustomer,
-                        success: function (result){
-                            console.log("customer is updated in server");
-                        }
-                    });
+                //put
+                $.ajax({
+                    url: url,
+                    type: 'put',
+                    data: updateCustomer,
+                    success: function (result) {
+                        console.log("customer is updated in server");
+                    }
+                });
 
-                    //delete
-                    $.ajax({
-                        url:url,
-                        type:'delete',
-                        data:updateCustomer,
-                        success: function (result){
-                            console.log("customer is deleted in server");
-                        }
-                    });                                       
+                //delete
+                $.ajax({
+                    url: url,
+                    type: 'delete',
+                    data: updateCustomer,
+                    success: function (result) {
+                        console.log("customer is deleted in server");
+                    }
                 });
             });
+        });
 
         /*var flower = {
             "id":7,
@@ -127,4 +129,5 @@
     </script>
 
 </body>
+
 </html>
