@@ -1,6 +1,6 @@
 const PatientCommandBuilder = require('../commands/PatientCommandBuilder');
 const PatientService = require('../services/PatientService');
-
+const PatientCommandBuilder = require('../commands/PatientCommandBuilder');
 class PatientController {
     admitPatient(req) {
         const command = new PatientCommandBuilder(req.patientId)
