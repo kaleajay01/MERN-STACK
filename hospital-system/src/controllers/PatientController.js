@@ -10,10 +10,8 @@ class PatientController {
             .addTest("X-Ray")
             .applyInsurance(req.insurance)
             .build();
-
         const service = new PatientService();
         service.execute(command);
     }
 }
-
 module.exports = PatientController;

@@ -2,8 +2,6 @@ class PatientService {
     execute(command) {
         console.log("Processing Patient Command");
         console.log(command);
-
-        // Simulate hospital workflow
         if (command.doctorId) {
             console.log("Doctor assigned");
         }
@@ -12,5 +10,4 @@ class PatientService {
         }
     }
 }
-
 module.exports = PatientService;
