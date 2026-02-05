@@ -8,6 +8,7 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', userRoutes);
-app.listen(7778, () => {
+
+app.listen(7788, () => {
     console.log("Server listening on port 7778");
 });

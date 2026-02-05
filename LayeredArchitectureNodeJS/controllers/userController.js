@@ -4,7 +4,7 @@ exports.addUser = (req, res) => {
     userService.addUser(name, contact, (err, result) => {
         if (err) return res.status(500).json(err);
         res.json({
-            message: "User added successfully",
+            message: "User added successfully!!!!!!!",
             id: result.insertId
         });
         console.log("Data Inserted...");
@@ -34,3 +34,5 @@ exports.updateUser = (req, res) => {
         console.log("Record updated...");
     });
 };
+
+//requst and response

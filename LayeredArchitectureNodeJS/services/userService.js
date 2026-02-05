@@ -11,3 +11,5 @@ exports.getAllUsers = (result) => {
 exports.editUser = (id, name, contact, result) => {
     userRepo.updateUser(id, name, contact, result);
 };
+
+//business logic

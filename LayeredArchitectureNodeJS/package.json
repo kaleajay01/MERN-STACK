@@ -1,0 +1,20 @@
+{
+  "name": "layeredarchitecturenodejs",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "AK",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.16.3",
+    "sql": "^0.78.0",
+    "sql2": "^0.0.1"
+  }
+}

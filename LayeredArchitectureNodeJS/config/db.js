@@ -15,3 +15,5 @@ connection.connect(function(err){
     }
 });
 module.exports = connection;
+
+//db connection

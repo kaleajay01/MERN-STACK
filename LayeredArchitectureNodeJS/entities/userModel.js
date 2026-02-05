@@ -6,3 +6,5 @@ class User {
     this.contact = contact;
   }};
   module.exports=User;
+
+    //object mapping

@@ -15,3 +15,6 @@ exports.updateUser = (id, name, contact, result) => {
     const sql = "UPDATE users SET name=?, contact=? WHERE id=?";
     connection.query(sql, [name, contact, id], result);
 };
+
+//sql related logic
+//sq query
