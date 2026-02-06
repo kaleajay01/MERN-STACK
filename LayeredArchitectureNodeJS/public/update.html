@@ -56,7 +56,7 @@
             data: JSON.stringify({ name: name, contact: contact }),
             success: function(response){
                 alert(response.message);
-                $("#updateRecord")[0].reset();
+                $("#updateRecord")[0];
             },
             error: function(err){
                 console.error(err);
