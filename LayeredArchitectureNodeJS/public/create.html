@@ -42,6 +42,7 @@
                 e.preventDefault();
                 let name = $("#name").val();
                 let contact = $("#contact").val();
+                
                 $.ajax({
                     url: "/users",
                     method: "POST",
