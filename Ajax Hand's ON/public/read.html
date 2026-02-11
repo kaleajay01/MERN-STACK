@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add User</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center">User List</h2>
+
+        <div class="card ">
+            <div class="card-body text-center">
+                <table class="table text-center">
+                    <tbody id="userTable">
+                    </tbody>
+                </table>
+                <button type="submit" id="getAllUser">Show Users</button><br><br>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(() => {
+            $("#getAllUser").click(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    url: "/allUser",
+                    method: "get",
+                    success: function (users) {
+                        let table = "";
+                        users.forEach(user => {
+                            table += `
+                    <tr>
+                        <td>${user.id}</td>
+                        <td>${user.name}</td>
+                        <td>${user.contact}</td>
+                    <tr>
+                    `;
+                        })
+                        $("#userTable").html(table);
+                    },
+                    error:function(err){
+                        console.error(err);
+                        alert("error.........!");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
