@@ -18,6 +18,3 @@ MERN stands for:
 - **Node.js** – Runtime environment
 
 ---
-
-## 🏗️ MERN Stack Architecture
-
